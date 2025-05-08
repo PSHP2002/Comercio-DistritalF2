@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Verdes</title>
+    <link rel="stylesheet" href="/css/arepas.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/imagenes/logop.jpg" alt="Los Verdes">
+    </div>
+    <nav >
+        <ul>
+            <li><a href="/componentes/index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Carta ▼</a>
+                <div class="dropdown-menu">
+                    <a href="/componentes/patacones.html">PATACONES</a>
+                    <a href="/componentes/arepas.html">AREPAS RELLENAS</a>
+                    <a href="/componentes/salchipapas.html">SALCHIPAPAS</a>
+                    <a href="/componentes/perros.html">PERROS CALIENTE</a>
+                    <a href="/componentes/hamburguesas.html">HAMBURGUESAS</a>
+                    <a href="/componentes/picadas.html">PICADAS</a>
+                    <a href="/componentes/carnes.html">CARNES A LA PLANCHA</a>
+                    <a href="/componentes/mariscos.html">PRODUCTOS DEL MAR</a>
+                    <a href="/componentes/bebidas.html">BEBIDAS ESPECIALES</a>
+                </div>
+            </li>
+            <li><a href="#">Nuestras Sedes</a></li>
+            <li><a href="#">Verdino Club</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" id="hamburger-btn">
+        ☰
+      </button>
+</header>
+<br><br><br><br><br><br><br><br><br><br>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/ar1.jpg" alt="AREPA RELLENA CON TODO">
+                <h2 class="card-title">AREPA RELLENA CON TODO</h2>
+            </div>
+            <div class="card-side back">
+                <div>AREPA RELLENA CON TODO</div>
+                <p>Precio: $25,000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/ar2.jpg" alt="RELLENA CAMPESINA">
+                <h2 class="card-title">RELLENA CAMPESINA</h2>
+            </div>
+            <div class="card-side back">
+                <div>RELLENA CAMPESINA</div>
+                <p>Contiene chicharrón, chorizo, carne desmechada, maduritos, queso, aguacate, maicitos</p>
+                <p>Precio: $27,000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/ar3.jpg" alt="RELLENA RANCHERA">
+                <h2 class="card-title">RELLENA RANCHERA</h2>
+            </div>
+            <div class="card-side back">
+                <div>RELLENA RANCHERA</div>
+                <p>Contiene ripio de papa, maicitos, mozzarella, salsa de la casa, chicharróncitos crocantes y salchicha ranchera</p>
+                <p>Precio: $24.000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="categoria">
+      <h2 class="sub">AREPAS RELLENAS</h2>
+      <div class="productos-grid">
+          <div class="producto">
+              <img src="/imagenes/ar1.jpg" alt="Hamburguesa">
+              <label>
+                <input type="checkbox" class="producto-checkbox" data-precio="25000">
+                Rellenas con todo - $25.000
+              </label>
+          </div>
+  
+          <div class="producto">
+              <img src="/imagenes/ar2.jpg" alt="Verdadera agrandada">
+              <label>
+                <input type="checkbox" class="producto-checkbox" data-precio="27000">
+                Rellenas campesina - $27.000
+              </label>
+          </div>
+  
+          <div class="producto">
+              <img src="/imagenes/ar3.jpg" alt="Verdadera chimba">
+              <label>
+                <input type="checkbox" class="producto-checkbox" data-precio="24000">
+                Rellenas ranchera - $24.000
+              </label>
+          </div>
+      </div>
+  
+  </div>
+        <!-- Repite el mismo formato para las demás categorías -->
+      </div>
+
+      <p class="p">📦 Costo de domicilio: <strong>$5.000</strong></p>
+      <button onclick="calcularTotal()">Calcular Total</button>
+      <p class="total" id="resultado"></p>
+    </div>
+  
+    <div class="hero">
+      <div class="content">
+          <h1>¿Que deseas pedir hoy ?</h1>
+          <button id="pedidoBtn">PEDIR DOMICILIO</button>
+      </div>
+  </div>
+  
+    <script src="/js/arepas.js">
+   
+    </script>
+<!-- Iconos flotantes -->
+</body>
+</html>

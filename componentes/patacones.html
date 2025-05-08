@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Verdes</title>
+    <link rel="stylesheet" href="/css/patacones.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/imagenes/logop.jpg" alt="Los Verdes">
+    </div>
+    <nav >
+        <ul>
+            <li><a href="/componentes/index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Carta ▼</a>
+                <div class="dropdown-menu">
+                    <a href="/componentes/patacones.html">PATACONES</a>
+                    <a href="/componentes/arepas.html">AREPAS RELLENAS</a>
+                    <a href="/componentes/salchipapas.html">SALCHIPAPAS</a>
+                    <a href="/componentes/perros.html">PERROS CALIENTE</a>
+                    <a href="/componentes/hamburguesas.html">HAMBURGUESAS</a>
+                    <a href="/componentes/picadas.html">PICADAS</a>
+                    <a href="/componentes/carnes.html">CARNES A LA PLANCHA</a>
+                    <a href="/componentes/mariscos.html">PRODUCTOS DEL MAR</a>
+                    <a href="/componentes/bebidas.html">BEBIDAS ESPECIALES</a>
+                </div>
+            </li>
+            <li><a href="#">Nuestras Sedes</a></li>
+            <li><a href="#">Verdino Club</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" id="hamburger-btn">
+        ☰
+      </button>
+</header>
+<br><br><br><br><br>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa1.jpg" alt="Patacones">
+                <h2 class="card-title">PATACON RELLENO</h2>
+            </div>
+            <div class="card-side back">
+                <div>PATACÓN RELLENO CON CAMARONES</div>
+                <p>Precio: 37.000.00</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa2.jpg" alt="AREPAS RELLENAS">
+                <h2 class="card-title">PATACON CON TODO</h2>
+            </div>
+            <div class="card-side back">
+                <div>PATACON CON TODO</div>
+                <p>Contiene  pollo, carne, chorizo, chicharrón crocante, queso costeño, maicitos, ripio de papa, salsa de la casa (No contiene huevo de codorniz)</p>
+                <p>Precio: $20,000.00</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa3.jpg" alt="PERROS CALIENTE">
+                <h2 class="card-title">PATACON RELLENO CON TODO</h2>
+            </div>
+            <div class="card-side back">
+                <div>PATACON RELLENO CON TODO</div>
+                <p>Contiene  pollo, carne, chorizo, chicharrón crocante,  queso, maicitos, ripio de papa, salsa de la casa</p>
+                <p>Precio: $20,000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa4.jpg" alt="Salchipapas">
+                <h2 class="card-title">CAMARONES GRATINADOS</h2>
+            </div>
+            <div class="card-side back">
+                <div>CAMARONES GRATINADOS</div>
+                <p>Patacón mediano lleno de camarones sazonados con salsa especial de la casa, cubiertos de queso mozzarella</p>
+                <p>Precio: $38,000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa5.jpg" alt="HAMBURGUESAS">
+                <h2 class="card-title">RELLENO CON CARNE</h2>
+            </div>
+            <div class="card-side back">
+                <div>RELLENO CON CARNE</div>
+                <p>Contiene carne desmechada, mozzarella, maicitos, ripio de papa, salsa de la casa</p>
+                <p>Precio: $18.000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/pa6.jpg" alt="PICADAS">
+                <h2 class="card-title">PATACON MONTAÑERO</h2>
+            </div>
+            <div class="card-side back">
+                <div>PATACON MONTAÑERO</div>
+                <p>Es un patacón crocante compuesto por lechuga, ripio de papa y maicitos está cubierto de chicharrón barriguero,carne desmechada, chorizo, maduritos, aguacate y salsa de la casa</p>
+                <p>Precio: $26,900</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+       
+    
+    </div>
+
+    <div class="hero">
+        <div class="content">
+            <h1>¿Que deseas pedir hoy ?</h1>
+            <button id="pedidoBtn">PEDIR DOMICILIO</button>
+        </div>
+    </div>
+
+
+<!-- Iconos flotantes -->
+
+<script src="/js/verdes.js"></script>
+</body>
+</html>

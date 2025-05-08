@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta Virtual</title>
+  <link rel="stylesheet" href="/css/verdaderas.css">
+  
+</head>
+<body>
+  <nav id="navbar" class="navbar">
+    <div class="logo-container">
+      <img src="/imagenes/verdaderas.jpeg" alt="Logo Los Verdes">
+  </div>
+    <ul class="nav-links">
+      <li><a href="/componentes/index.html">Inicio</a></li>
+      <li class="usuario-icono">
+        <a href="">Carta ▼</a>
+        <div class="dropdown-menu">
+          <a href="#">Hamburguesas</a>
+          <a href="#">Salchipapas</a>
+          <a href="#">picadas</a>
+          <a href="#">gratinados</a>
+          <a href="#">chuzos</a>
+          <a href="#">Carnes asadas</a>
+          <li><a href="/componentes/contactos.html">Quienes somos</a></li>
+        </div>
+      </li>
+    </ul>
+  </nav> 
+  <br><br><br><br><br><br>  <br><br><br><br><br><br>  <br><br><br><br><br><br>
+  <div class="slider-box">
+    <ul class="slider">
+      <li><figure class="imagen-slide imagen1"></figure></li>
+      <li><figure class="imagen-slide imagen2"></figure></li>
+      <li><figure class="imagen-slide imagen3"></figure></li>
+      <li><figure class="imagen-slide imagen4"></figure></li>
+      <li><figure class="imagen-slide imagen5"></figure></li>
+    </ul>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="center-wrapper">
+    <div class="gallery-container">
+      
+      <h2>Nuestra Deliciosa Comida</h2>
+      <div class="image-grid">
+          <div class="image-item">
+              <img src="/imagenes/ver2.jpeg" alt="Plato 1">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver3.jpeg" alt="Plato 2">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver4.jpeg" alt="Plato 3">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver5.jpeg" alt="Plato 4">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver6.jpeg" alt="Hamburguesa">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver7.jpeg" alt="Perro Caliente">
+          </div>
+          <div class="image-item">
+              <img src="/imagenes/ver8.jpeg" alt="Papas y Carne">
+          </div>
+          <div class="image-item">
+              <img src="https://losverdes.com.co/wp-content/uploads/2023/03/WhatsApp-Image-2023-03-16-at-11.49.04-AM.jpeg" alt="Bebidas">
+          </div>
+      </div>
+    </div>
+  </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="carta">
+    <h1>Carta Principal</h1>
+    <img src="/imagenes/vcarta.jpeg" alt="Carta del restaurante" class="imagen-carta" onclick="abrirModal()">
+
+    <div class="categoria">
+      <h2>Hamburguesas</h2>
+
+      <!-- Sección existente -->
+      
+        <div class="producto">
+          <img src="/imagenes/guesa.jpg" alt="Hamburguesa">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="15000">
+            Hamburguesas - $15.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/guesa.jpg" alt=" Verdadera agrandada">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="12000">
+            Verdadera agrandada - $12.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/guesa.jpg" alt="Verdadera chimba">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="10000">
+            Verdadera chimba - $10.000
+          </label>
+        </div>
+
+        <h2>Salchipapas</h2>
+        <div class="producto">
+          <img src="/imagenes/ver4.jpeg" alt="Bread Basket">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="32000">
+            Verdadera con ranchera y adición de queso - $32.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/ver4.png" alt="Garlic Bread">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="36000">
+            Verdadera - $36.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/ver4.jpeg" alt="Grilled Calamari">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="28000">
+            Verdadera - $28.000
+          </label>
+        </div>
+
+        <h2>Perros</h2>
+        <div class="producto">
+          <img src="/imagenes/ver7.jpeg" alt="Bread Basket">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="32000">
+            Bread Basket (compartir) - $32.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/ver7.jpeg" alt="Garlic Bread">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="36000">
+            Garlic Bread (compartir) - $36.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="/imagenes/ver7.jpeg" alt="Grilled Calamari">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="28000">
+            Grilled Calamari (compartir) - $28.000
+          </label>
+        </div>
+      
+        <h2>Picadas</h2>
+        <div class="producto">
+          <img src="ruta-de-la-imagen/fries.jpg" alt="Fries">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="32000">
+            Fries - $32.000
+          </label>
+        </div>
+      
+        <div class="producto">
+          <img src="ruta-de-la-imagen/vegetables.jpg" alt="Vegetables">
+          <label>
+            <input type="checkbox" class="producto-checkbox" data-precio="32000">
+            Vegetables - $32.000
+          </label>
+        </div>
+      <!-- Repite el mismo formato para las demás categorías -->
+    </div>
+
+    <p class="p">📦 Costo de domicilio: <strong>$5.000</strong></p>
+    <button onclick="calcularTotal()">Calcular Total</button>
+    <p class="total" id="resultado"></p>
+  </div>
+
+  <!-- Modal para ver la imagen grande -->
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <img class="modal-contenido" id="modal-img" src="/imagenes/vcarta.jpeg" alt="Carta ampliada">
+  </div>
+
+  <script>
+    const costoDomicilio = 5000;
+
+    function calcularTotal() {
+      const checkboxes = document.querySelectorAll('.producto-checkbox');
+      let totalProductos = 0;
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          totalProductos += parseInt(cb.getAttribute('data-precio'));
+        }
+      });
+
+      const totalFinal = totalProductos + costoDomicilio;
+      document.getElementById('resultado').textContent = `Total a pagar (productos + domicilio): $${totalFinal.toLocaleString()}`;
+    }
+
+    function abrirModal() {
+      document.getElementById("modal").style.display = "flex";
+    }
+
+    function cerrarModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">Jóvenes+</div>
+    <div class="footer-socials">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Jóvenes+. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

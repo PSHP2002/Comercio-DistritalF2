@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Verdes</title>
+    <link rel="stylesheet" href="/css/salchipapas.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="/imagenes/logop.jpg" alt="Los Verdes">
+    </div>
+    <nav >
+        <ul>
+            <li><a href="/componentes/inicio.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Carta ▼</a>
+                <div class="dropdown-menu">
+                    <a href="/componentes/patacones.html">PATACONES</a>
+                    <a href="/componentes/arepas.html">AREPAS RELLENAS</a>
+                    <a href="/componentes/salchipapas.html">SALCHIPAPAS</a>
+                    <a href="/componentes/perros.html">PERROS CALIENTE</a>
+                    <a href="/componentes/hamburguesas.html">HAMBURGUESAS</a>
+                    <a href="/componentes/picadas.html">PICADAS</a>
+                    <a href="/componentes/carnes.html">CARNES A LA PLANCHA</a>
+                    <a href="/componentes/mariscos.html">PRODUCTOS DEL MAR</a>
+                    <a href="/componentes/bebidas.html">BEBIDAS ESPECIALES</a>
+                </div>
+            </li>
+            <li><a href="#">Nuestras Sedes</a></li>
+            <li><a href="#">Verdino Club</a></li>
+        </ul>
+    </nav>
+    <button class="hamburger" id="hamburger-btn">
+        ☰
+      </button>
+</header>
+<br><br><br><br><br>
+
+    <div class="cards-container">
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/sal1.jpg" alt="salchipapas">
+                <h2 class="card-title"> RANCHERA GRATINADA</h2>
+            </div>
+            <div class="card-side back">
+                <div> RANCHERA GRATINADA</div>
+                <p>Contiene papas, ripio de papas, maicitos, salsa (rosada y tomate) tocineta, mozzarella</p>
+                <p>Precio: $23.000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/sal2.jpg" alt="salchipapas">
+                <h2 class="card-title">Salchipapa Ranchera</h2>
+            </div>
+            <div class="card-side back">
+                <div>Salchipapa Ranchera</div>
+                <p>Contiene papas,salchicha ranchera, salsas (tomate y rosada), ripio de papa, queso costeño</p>
+                <p>Precio: $17.000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="card-side front">
+                <img src="/imagenes/sal3.jpg" alt="salchipapas">
+                <h2 class="card-title">TRADICIONAL (2)</h2>
+            </div>
+            <div class="card-side back">
+                <div>TRADICIONAL</div>
+                <p>Contiene papas a la francesa, salchicha tradicional, ripio de papa, salsa de tomate y rosada, queso costeño rallado.</p>
+                <p>Precio: $17.000</p>
+                <button class="order-btn">Ordenar</button>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="categoria">
+        <h2 class="sub">RANCHERA GRATINADA</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="/imagenes/sal1.jpg" alt="SALCHIPAPAS">
+                <label>
+                  <input type="checkbox" class="producto-checkbox" data-precio="23000">
+                  Rancheras gratinadas - $23.000
+                </label>
+            </div>
+    
+            <div class="producto">
+                <img src="/imagenes/sal2.jpg" alt="SALCHIPAPAS">
+                <label>
+                  <input type="checkbox" class="producto-checkbox" data-precio="17000">
+                  Salchipapa ranchera - $17.000
+                </label>
+            </div>
+    
+            <div class="producto">
+                <img src="/imagenes/sal3.jpg" alt="SALCHIPAPAS">
+                <label>
+                  <input type="checkbox" class="producto-checkbox" data-precio="17000">
+                  Tradicional 2 - $17.000
+                </label>
+            </div>
+        </div>
+     
+    </div>
+    
+    <div>
+        <p class="p">📦 Costo de domicilio: <strong>$5.000</strong></p>
+        <button onclick="calcularTotal()">Calcular Total</button>
+        <p class="total" id="resultado"></p>
+      </div>
+
+    <div class="hero">
+        <div class="content">
+            <h1>¿Que deseas pedir hoy ?</h1>
+            <button id="pedidoBtn">PEDIR DOMICILIO</button>
+        </div>
+    </div>
+
+
+<!-- Iconos flotantes -->
+
+<script src="/js/salchipapas.js"></script>
+</body>
+</html>
