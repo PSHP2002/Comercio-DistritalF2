@@ -12,6 +12,7 @@ body {
   background: black;
   color: #333;
   padding-bottom: 100px;
+  
 }
 
 /* HEADER Y NAV */
@@ -199,7 +200,7 @@ nav ul li a:hover {
 .sub {
   font-size: 2rem;
   margin-bottom: 1rem;
-  background:  #386641;
+  background:  white;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s infinite ease-in-out;
@@ -212,11 +213,10 @@ nav ul li a:hover {
 
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
   padding: 1rem;
 }
-
 .producto {
   background: #ffffff;
   border-radius: 15px;
@@ -266,7 +266,7 @@ button[onclick="calcularTotal()"]:hover {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
-  color: #00796b;
+  color:white;
 }
 
 /* RESPONSIVE NAV */
@@ -314,6 +314,42 @@ button[onclick="calcularTotal()"]:hover {
     background-color: #333;
 }
 
+@media (max-width: 600px) {
+  .producto {
+    padding: 0.5rem;
+  }
+
+  .producto label {
+    font-size: 0.9rem;
+  }
+
+  .producto-cantidad {
+    width: 40px;
+  }
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
 
 .cantidad-control {
   display: flex;

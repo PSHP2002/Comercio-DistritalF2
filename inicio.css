@@ -17,6 +17,7 @@ body {
   font-family: Arial, sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
+   overflow: auto; /* o scroll, hidden, visible */
 }
 
 a {
