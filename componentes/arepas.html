@@ -14,7 +14,7 @@
     </div>
     <nav >
         <ul>
-            <li><a href="/componentes/index.html">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li class="dropdown">
                 <a href="#">Carta ▼</a>
                 <div class="dropdown-menu">
@@ -89,6 +89,11 @@
                 <input type="checkbox" class="producto-checkbox" data-precio="25000">
                 Rellenas con todo - $25.000
               </label>
+                <div class="cantidad-control">
+                  <button class="restar">-</button>
+                  <span class="cantidad">1</span>
+                  <button class="sumar">+</button>
+              </div>
           </div>
   
           <div class="producto">
@@ -97,6 +102,11 @@
                 <input type="checkbox" class="producto-checkbox" data-precio="27000">
                 Rellenas campesina - $27.000
               </label>
+                  <div class="cantidad-control">
+                  <button class="restar">-</button>
+                  <span class="cantidad">1</span>
+                  <button class="sumar">+</button>
+              </div>
           </div>
   
           <div class="producto">
@@ -105,6 +115,11 @@
                 <input type="checkbox" class="producto-checkbox" data-precio="24000">
                 Rellenas ranchera - $24.000
               </label>
+                 <div class="cantidad-control">
+                  <button class="restar">-</button>
+                  <span class="cantidad">1</span>
+                  <button class="sumar">+</button>
+              </div>
           </div>
       </div>
   
@@ -113,7 +128,7 @@
       </div>
 
       <p class="p">📦 Costo de domicilio: <strong>$5.000</strong></p>
-      <button onclick="calcularTotal()">Calcular Total</button>
+      <button onclick="calcularTotal()">Precio a pagar</button>
       <p class="total" id="resultado"></p>
     </div>
   

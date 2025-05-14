@@ -74,3 +74,7 @@ const navMenu = document.querySelector('nav ul');
 hamburgerBtn.addEventListener('click', () => {
   navMenu.classList.toggle('show');
 });
+
+document.getElementById("hamburger-btn").addEventListener("click", function () {
+    document.getElementById("nav-menu").classList.toggle("show");
+});

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los Verdes</title>
-    <link rel="stylesheet" href="/css/hamburguesa.css">
+    <link rel="stylesheet" href="/css/perros.css">
 </head>
 <body>
 
@@ -39,11 +39,12 @@
 </header>
 <br><br><br><br><br>
 
+
     <div class="cards-container">
         <div class="card">
             <div class="card-side front">
-                <img src="/imagenes/p1.jpeg" alt="Patacones">
-                <h2 class="card-title">PATACONES</h2>
+                <img src="/imagenes/h1.png" alt="Patacones">
+                <h2 class="card-title">HAMBURGUESAS</h2>
             </div>
             <div class="card-side back">
                 <div>Back side</div>
@@ -55,8 +56,8 @@
     
         <div class="card">
             <div class="card-side front">
-                <img src="/imagenes/p2.jpg" alt="AREPAS RELLENAS">
-                <h2 class="card-title">AREPAS RELLENAS</h2>
+                <img src="/imagenes/h2.png" alt="AREPAS RELLENAS">
+                <h2 class="card-title">HAMBURGUESAS</h2>
             </div>
             <div class="card-side back">
                 <div>Back side</div>
@@ -66,104 +67,47 @@
             </div>
         </div>
     
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p14.jpg" alt="PERROS CALIENTE">
-                <h2 class="card-title">PERROS CALIENTE</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de los perros caliente</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p3.jpg" alt="Salchipapas">
-                <h2 class="card-title">Salchipapas</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de las salchipapas</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p5.jpg" alt="HAMBURGUESAS">
-                <h2 class="card-title">HAMBURGUESAS</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de las hamburguesas</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p02.png" alt="PICADAS">
-                <h2 class="card-title">PICADAS</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de las picadas</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p01.png" alt="MARISCOS">
-                <h2 class="card-title">MARISCOS</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de los mariscos</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p8.png" alt="CHUZOS">
-                <h2 class="card-title">CHUZOS</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de las CHUZOS</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-side front">
-                <img src="/imagenes/p7.png" alt="BEBIDAS ESPECIALES">
-                <h2 class="card-title">BEBIDAS ESPECIALES</h2>
-            </div>
-            <div class="card-side back">
-                <div>Back side</div>
-                <p>Descripción de las bebidas especiales</p>
-                <p>Precio: $15.000</p>
-                <button class="order-btn">Ordenar</button>
-            </div>
-        </div>
+
     
     </div>
 
-    <div class="hero">
-        <div class="content">
-            <h1>¿Que deseas pedir hoy ?</h1>
-            <button id="pedidoBtn">PEDIR DOMICILIO</button>
-        </div>
+    <div class="categoria">
+      <h2 class="sub">HAMBURGUESAS</h2>
+      <div class="productos-grid">
+          <div class="producto">
+              <img src="/imagenes/h1.png" alt="Hamburguesa">
+              <label>
+                <input type="checkbox" class="producto-checkbox" data-precio="26900">
+                La mayor de la casa - $26.900
+              </label>
+          </div>
+  
+          <div class="producto">
+              <img src="/imagenes/h2.png" alt="Verdadera agrandada">
+              <label>
+                <input type="checkbox" class="producto-checkbox" data-precio="23900">
+                Golden Burguer - $23.900
+              </label>
+          </div>
+    
+  </div>
+        <!-- Repite el mismo formato para las demás categorías -->
+      </div>
+
+      <p class="p">📦 Costo de domicilio: <strong>$5.000</strong></p>
+      <button onclick="calcularTotal()">Calcular Total</button>
+      <p class="total" id="resultado"></p>
     </div>
+  
+    <div class="hero">
+      <div class="content">
+          <h1>¿Que deseas pedir hoy ?</h1>
+          <button id="pedidoBtn">PEDIR DOMICILIO</button>
+      </div>
 
 
 <!-- Iconos flotantes -->
 
-<script src="/js/verdes.js"></script>
+<script src="/js/perros.js"></script>
 </body>
 </html>

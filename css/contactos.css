@@ -42,23 +42,24 @@ section{
  border-radius: 2rem;
 }
 
-.card-wrapper{
- display: flex;
- align-items: center;
- align-content: center;
- flex-direction: column;
- color: #ffffff;
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
 }
 
-.card{
- width: 32rem;
- background-color:#383535;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- margin: 2rem 0;
- box-shadow: .5rem .5rem 3rem rgb(0, 0, 0, 0.2);
+.card {
+  width: 100%;
+  max-width: 30rem;
+  background-color: #383535;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
 }
 
 .card .card-img{
@@ -191,4 +192,10 @@ section{
 .fa-instagram-square:hover,
 .fa-google-plus-square:hover{
     color: rgb(118, 118, 131);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 90%; /* se adapta al ancho del celular */
+  }
 }

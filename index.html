@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a class="brand" href="#">Turbo Restaurants</a>
+    <div class="hamburger" id="hamburger">
+      ☰
+    </div>
+    <div class="nav-links" id="nav-links">
+      <a href="#info">Información</a>
+      <a href="#datos">Datos</a>
+      <a href="#calculadora">Encuesta</a>
+      <a href="#dashboard">Dashboard</a>
+    </div>
+  </div>
+</nav>
+
+  <main class="container">
+    <section id="info" class="section">
+      <h1>Restaurantes en Turbo</h1>
+      <p>Explora el histórico y situación actual de los restaurantes en el distrito de Turbo.</p>
+      <h2>Cocinas Destacadas</h2>
+      <ul>
+        <li>Comida criolla</li>
+        <li>Mariscos</li>
+        <li>Comida rapida</li>
+      </ul>
+      <h2>Red de Apoyo</h2>
+      <ul>
+        <li><a href="https://www.turismo.gov.co/" target="_blank">Agencia de Turismo</a></li>
+        <li><a href="https://www.mincomercio.gov.co/" target="_blank">Ministerio de Comercio</a></li>
+        <li><a href="https://www.ccb.org.co/" target="_blank">Cámara de Comercio de Turbo</a></li>
+      </ul>
+    </section>
+
+    <section id="datos" class="section">
+      <h2>Datos Históricos de Restaurantes</h2>
+      <div class="filters">
+        <input type="number" id="yearFrom" placeholder="Año desde (1965)">
+        <input type="number" id="yearTo" placeholder="Año hasta (2025)">
+        <select id="typeFilter"><option value="">Todos</option></select>
+        <button id="btnFilter">Filtrar</button>
+      </div>
+      <table id="dataTable">
+        <thead>
+          <tr><th>Año</th><th>Cocina</th><th># de Restaurantes</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="calculadora" class="section">
+      <h2>Encuesta de Calidad</h2>
+      <p>Evalúa aspectos clave de tu restaurante:</p>
+      <div id="survey"></div>
+      <button id="btnCalc">Calcular Puntuación</button>
+      <div id="surveyResult"></div>
+    </section>
+
+<section id="dashboard" class="section">
+  <h2>Dashboard de Restaurantes</h2>
+
+  <!-- Gráfico de barras con imagen -->
+  <div class="chart-block">
+    <img src="/imagenes/image (2).png" alt="Gráfico de barras - Ventas por categoría" style="width:100%; max-width:400px; margin-bottom:1rem;">
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <!-- Gráfico de torta con imagen -->
+  <div class="chart-block">
+    <img src="/imagenes/image (3).png" alt="Gráfico de torta - Consumo energético" style="width:100%; max-width:400px; margin:2rem 0 1rem;">
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <!-- Gráfico de líneas con imagen -->
+  <div class="chart-block">
+    <img src="/imagenes/image (4).png" alt="Gráfico de líneas - Tendencias mensuales" style="width:100%; max-width:400px; margin:2rem 0 1rem;">
+    <canvas id="lineChart"></canvas>
+  </div>
+
+  <!-- Gráfico de área con imagen -->
+  <div class="chart-block">
+    <img src="/imagenes/image (5).png" alt="Gráfico de área - Producción anual" style="width:100%; max-width:400px; margin:2rem 0 1rem;">
+    <canvas id="areaChart"></canvas>
+  </div>
+</section>
+
+  </main>
+
+   <div class="container fixed-top-right">
+        <h1>Categorías</h1>
+        <div class="categories-grid">
+            <div class="category-card" data-category="restaurantes">
+                <div class="icon">🍽️</div>
+                <div class="text"> <a href="/componentes/restaurantes.html">Restaurantes y bares</a></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      // Datos históricos de ejemplo
+      const historyData = [
+        { year: 1965, type: 'Criolla', value: 5 },
+        { year: 1980, type: 'Mariscos', value: 8 },
+        { year: 2010, type: 'Fast Food', value: 10 },
+        { year: 2025, type: 'Criolla', value: 12 }
+      ];
+  
+      // Inicializar filtros
+      const typeFilter = document.getElementById('typeFilter');
+      new Set(historyData.map(d => d.type)).forEach(t => typeFilter.add(new Option(t, t)));
+      document.getElementById('btnFilter').addEventListener('click', filterData);
+  
+      function renderTable(data) {
+        const tbody = document.querySelector('#dataTable tbody');
+        tbody.innerHTML = '';
+        data.forEach(d => {
+          tbody.innerHTML += `<tr><td>${d.year}</td><td>${d.type}</td><td>${d.value}</td></tr>`;
+        });
+      }
+  
+      function filterData() {
+        const from = parseInt(document.getElementById('yearFrom').value) || 1965;
+        const to = parseInt(document.getElementById('yearTo').value) || 2025;
+        const type = document.getElementById('typeFilter').value;
+        const filtered = historyData.filter(d => d.year >= from && d.year <= to && (type === '' || d.type === type));
+        renderTable(filtered);
+      }
+  
+      // Mostrar tabla inicial
+      renderTable(historyData);
+  
+      // Encuesta de calidad
+      const questions = [
+        { q: 'Certificación sanitaria?', w: 3 },
+        { q: 'Variedad de menú?', w: 2 },
+        { q: 'Buena ubicación?', w: 3 },
+        { q: 'Atención al cliente?', w: 2 }
+      ];
+      const surveyDiv = document.getElementById('survey');
+      questions.forEach((s, i) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <p>${s.q}</p>
+          <select id="q${i}">
+            <option value="0">No</option>
+            <option value="${s.w}">Sí</option>
+          </select>`;
+        surveyDiv.appendChild(card);
+      });
+      document.getElementById('btnCalc').addEventListener('click', () => {
+        let score = 0;
+        questions.forEach((s, i) => {
+          score += parseInt(document.getElementById('q' + i).value);
+        });
+        const maxScore = questions.reduce((a, b) => a + b.w, 0);
+        const percent = ((score / maxScore) * 100).toFixed(2);
+        document.getElementById('surveyResult').innerHTML = `<div class="card">Puntuación: ${percent}%</div>`;
+      });
+  
+      // Generar gráficos
+      new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Criolla', 'Mariscos', 'Fast Food'],
+          datasets: [{ label: '# Restaurantes', data: [12, 8, 6, 10], backgroundColor: '#c0392b' }]
+        }
+      });
+      new Chart(document.getElementById('pieChart'), {
+        type: 'pie',
+        data: {
+          labels: ['Criolla', 'Mariscos',  'Fast Food'],
+          datasets: [{ data: [12, 8, 6, 10], backgroundColor: ['#c0392b','#e67e22','#2ecc71','#f1c40f'] }]
+        }
+      });
+      new Chart(document.getElementById('lineChart'), {
+        type: 'line',
+        data: {
+          labels: [1965, 1980, 1995, 2010, 2025],
+          datasets: [{ label: 'Total Restaurantes', data: [5, 8, 15, 25, 30], borderColor: '#c0392b', fill: false }]
+        }
+      });
+      new Chart(document.getElementById('areaChart'), {
+        type: 'line',
+        data: {
+          labels: [1965, 1980, 1995, 2010, 2025],
+          datasets: [{ label: 'Restaurantes', data: [5, 8, 15, 25, 30], backgroundColor: 'rgba(192,57,43,0.5)', fill: true }]
+        }
+      });
+
+        document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+});
+    </script>
+ 
+</body>
+</html>
