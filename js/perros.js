@@ -126,12 +126,6 @@ function abrirModal() {
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
-  
-
-document.getElementById("hamburger-btn").addEventListener("click", function () {
-    document.getElementById("nav-menu").classList.toggle("show");
-});
-// --------- Pausar video si sales de la pestaña ---------
 
 // --------- Menu Hamburguesa ---------
 const hamburgerBtn = document.getElementById('hamburger-btn');

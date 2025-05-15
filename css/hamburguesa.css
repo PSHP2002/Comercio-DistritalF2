@@ -12,6 +12,7 @@ body {
   background: black;
   color: #333;
   padding-bottom: 100px;
+  
 }
 
 /* HEADER Y NAV */
@@ -212,11 +213,10 @@ nav ul li a:hover {
 
 .productos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
   padding: 1rem;
 }
-
 .producto {
   background: #ffffff;
   border-radius: 15px;
@@ -290,7 +290,7 @@ button[onclick="calcularTotal()"]:hover {
     display: flex;
   }
 }
-  .dropdown-menu {
+ .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -312,4 +312,71 @@ button[onclick="calcularTotal()"]:hover {
 
 .dropdown-menu a:hover {
     background-color: #333;
+}
+
+@media (max-width: 600px) {
+  .producto {
+    padding: 0.5rem;
+  }
+
+  .producto label {
+    font-size: 0.9rem;
+  }
+
+  .producto-cantidad {
+    width: 40px;
+  }
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cantidad-control button {
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cantidad-control button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cantidad-control .cantidad {
+  min-width: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
 }
